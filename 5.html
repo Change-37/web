@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>연습문제 2</title>
+    <style>
+			#container { 
+				width:520px;
+				border:1px solid black;
+				padding:20px 40px;
+				margin:0 auto;
+			}
+      fieldset { margin-bottom:15px; }
+      legend { font-weight:bold; }
+			ul {list-style-type: none;}
+			li { line-height:30px;}
+    </style>
+  </head>
+  <body>
+		<div id="container">
+			<h1>프런트엔드 개발자 지원서 </h1>
+			<p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+			<hr>
+			<form>
+                <fieldset>
+                    <legend>사용자 정보</legend>
+                    <ul>
+                        <li>
+                            <label for="uname">이름</label>
+                            <input type="text" id="uname" placeholder="공백없이 입력해주세요.">
+                        </li>
+                        <li>
+                            <label for="ucon">연락처</label>
+                            <input type="text" id="ucon">
+                        </li>
+                    </ul>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>지원분야</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" name="submit" id="submit-wp" checked>
+                            <label for="submit-wp">웹 퍼블리싱</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="submit" id="submit-wd">
+                            <label for="submit-wd">웹 어플리케이션 개발</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="submit" id="submit-de">
+                            <label for="submit-de">개발 환경 개선</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>지원동기</legend>
+                    <textarea name="sub-moti" id="submit-mo" placeholder="지원동기를 간락히 써 주세요." rows="5" cols="64"></textarea>
+                </fieldset>
+                <div id="buttons">
+                    <input type="submit" value="접수하기">
+                    <input type="reset" value="취소">
+                </div>
+			</form>
+		</div>
+  </body>
+</html>
+

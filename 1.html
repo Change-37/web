@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <title>레드향</title>
+</head>
+
+<body>
+
+
+    <div id="container" style="width : 480px; margin : 40px auto">
+        <img src="./tangerines.jpg" alt="레드향" width="100%">
+	    <h1>레드향</h1>
+	    <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+	    <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로 <br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+	    <p>비타민 C와 비타민 P가 풍부해<br> <strong>혈액순환, 감기예방</strong> 등에 좋은 것으로 알려져 있다.</p>
+	    <a href="https://search.naver.com/search.naver?query=레드향">네이버로 검색</a>
+	    <hr>
+        <h1>레드향 주문하기</h1>
+        <form>
+            <fieldset>
+                <legend>배송 정보</legend>
+                <ul id="shipping">
+                    <li>
+                        <label for="user_name">이름</label>
+                        <input type="text" id="user_name">
+                    </li>
+                    <li>
+                        <label for="addr">배송 주소</label>
+                        <input type="text" id="addr">
+                    </li>
+                    <li>
+                        <label for="mail">메일</label>
+                        <input type="text" id="mail">
+                    </li>
+                    <li>
+                        <label for="phone">연락처</label>
+                        <input type="text" id="phone">
+                    </li>
+                    <li>
+                        <label for="d-day">배송 지정</label>
+                        <input type="text" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+                    </li>
+                    <li>
+                        <label for="memo">메모</label>
+                        <input type="text" id="memo">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>상품 선택</legend>
+                <p><b>주문할 상품을 선택해 주세요.</b></p>
+                <label>
+                    <select>
+                        <option value="special_1" selected>레드향</option>
+                        <option value="special_2">레드향 상</option>
+                        <option value="family_3">레드향 중</option>
+                        <option value="family_4">레드향 소</option>
+                    </select>
+                </label>
+                <ul>
+                    <li>
+                        <label><input type="checkbox" value="s_3">선물용 3kg</label>
+                        <input type="number" min="0" max="5">개 (최대 5개)
+                    </li>
+                    <li>
+                        <label><input type="checkbox" value="s_5">선물용 5kg</label>
+                        <input type="number" min="0" max="3" value="1">개 (최대 3개)
+                    </li>
+                </ul>
+            </fieldset>
+
+            <div>
+                <input type="submit" value="주문하기">
+                <input type="reset" value="취소하기">
+            </div>
+        </form>
+    </div>
+</body>
