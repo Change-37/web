@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>회원가입 페이지</title>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form action="" method="POST">
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <label for="id">아이디</label>
+            <input id="id" type="text">
+            <br>
+            <label for="pw">비밀번호</label>
+            <input id="pw" type="password">
+            <br>
+            <label for="chpw">비밀번호 확인</label>
+            <input id="chpw" type="password">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>회원 정보</legend>
+            <label for="name">이름</label>
+            <input id="name" type="text">
+            <br>
+            성별&nbsp;
+            <input id="male" name="gender" type="radio">
+            <label for="male">남</label>
+            <input id="fmale" name="gender" type="radio">
+            <label for="fmale">여</label>
+            <br>
+            생년월일&nbsp;
+            <input type="date">
+            <br>
+            <input id="email" type="email">
+            <label for="email">이메일</label>
+        </fieldset>
+        <br>
+        <button id="clear">초기화</button>
+        <button id="submit">제출</button>
+    </form>
+        
+</body>
+</html>

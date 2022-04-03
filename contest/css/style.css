@@ -1,0 +1,185 @@
+
+.navigation {
+    margin: 0;
+    top: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    position: fixed;
+    background-color: rgb(164, 164, 224);
+    z-index: 60;
+}
+.navigation__logo {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    max-height: 100%;
+    margin: 0 15px;
+}
+
+.students-list div button{
+    width: 100px;
+    height: 65px;
+    padding: 13px 25px 11px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: none;
+    color: #dedede;
+    background: #135e9f;
+    border-bottom: 5px solid #135e9f;
+    transition: all .15s ease-in;
+}
+.students-list div button:hover {
+    transform: scale(1.1);
+    border-bottom: 5px solid rgba(0,255,230,.5);
+    background: linear-gradient(0deg,rgba(0,255,230,.5),rgba(255, 255, 255, .5) 50%);
+} /* 왜 안됨??? */
+.students-list {
+    margin: 100px auto;
+    width: 90%;
+    max-width: 1600px;
+    text-align: center;
+}
+#students__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    padding-top: 60px;
+    font-size: 0;
+    line-height: 0;
+    overflow: visible;
+}
+.student {
+    margin: 8px;
+    width: 240px;
+    height: 320px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #24262a;
+    background-color: rgba(203, 203, 203, 0.4);
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.student:hover{
+    background: linear-gradient(0deg,rgba(25, 217, 255, 0.7),rgba(77, 130, 255, 0.1) 70%);
+    transform: scale(1.17);
+    z-index: 10;
+    box-shadow: 0 0 10px 1px rgb(0 0 0 / 50%);
+}
+.student span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 7px 0 10px;
+    width: 100%;
+    font-size: 26px;
+    line-height: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #24262a;
+    background-color: #c3c3c3;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+.student:hover span{
+    background-color: rgb(5, 155, 185);
+    color: white;
+}
+.student .student__img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.student .student__icon{
+    display: block;
+    position: absolute;
+    top: 58%;
+    right: auto;
+    left: 55%;
+    bottom: auto;
+    margin: 0 -25%;
+    width: 100px;
+    height: auto;
+}
+.student .student__icon img{
+    width: 90px;
+    height: auto;
+}
+.redbg{
+    top: 0;
+    right: 0;
+    position: fixed;
+}
+.greenbg{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+}
+.linebg{
+    width: 600px;
+    height: auto;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.info-container{
+    margin: 100px auto;
+    width: 70%;
+    max-width: 1600px;
+    height: 1200px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(203, 203, 203, 0.1);
+}
+.info-student{
+    top: 12px;
+    left: 50px;
+    margin: 8px 8px;
+    width: 240px;
+    height: 320px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #24262a;
+    background: linear-gradient(0deg,rgba(25, 217, 255, 0.7),rgba(77, 130, 255, 0.1) 70%);
+    overflow: hidden;
+}
+.info-student span {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 7px 0 10px;
+    width: 100%;
+    font-size: 26px;
+    line-height: 20px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #24262a;
+    background-color: #c3c3c3;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+.info-student .student__img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.youtube-in{
+    padding: 100px 0;
+    margin: 10px auto;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.youtube-in iframe{
+    width: 560px;
+    height: 315px;
+}

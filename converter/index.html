@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>단위 변환기</title>
+    <link rel="stylesheet" href="convert.css">
+    <script src="converter.js"></script>
+</head>
+<body>
+    <div class="first-box" onchange="convert1()">
+        <input type="number" id="fst-num">
+        <select id="fst-unit">
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+            <option value="km">km</option>
+            <option value="in">inch</option>
+            <option value="ft">feet</option>
+        </select>
+    </div>
+    <div class="second-box" onchange="convert2()">
+        <input type="number" id="snd-num"></input>
+        <select id="snd-unit">
+            <option value="cm">cm</option>
+            <option value="m">m</option>
+            <option value="km">km</option>
+            <option value="in">inch</option>
+            <option value="ft">feet</option>
+        </select>
+    </div>
+</body>
+</html>
