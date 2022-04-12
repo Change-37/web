@@ -36,145 +36,53 @@ function recommand()
 {
     for(let i = 0; i < 4; i++)
     {
-        let Up = [];
-        let Dn = [];
-        let Un = [];
-        let Nu = [];
+        let Up = 0;
+        let Dn = 0;
+        let Un = 0;
+        let Nu = 0;
         recs[i].textContent = "";
         let pwd = [];
         let n = Math.floor( Math.random() * 5 ) + 8;
         for(let j = 0; j < n; j++)
         {
             let m = Math.floor( Math.random() *10 )
+            if(j == 3 && Nu == 0)
+            {
+                m = 0
+            }
+            if(j == 0)
+            {
+                m = 1;
+            }
+            if(j == 7 && Up == 0)
+            {
+                m = 2
+            }
+            if(j == 5 && Un == 0)
+            {
+                m = 3;
+            }
             switch (m%4)
             {
                 case 0:
                     pwd[j] = Math.floor( Math.random() * 10 );
-                    Nu.push(j);
+                    Nu++;
                     break;
                 case 1:
                     let a = Math.floor( Math.random() * alpha.length );
                     pwd[j] = alpha[a];
-                    Dn.push(j);
+                    Dn++;
                     break;
                 case 2:
                     let b = Math.floor( Math.random() * BETA.length );
                     pwd[j] = BETA[b];
-                    Up.push(j);
+                    Up++;
                     break;
                 case 3:
                     let u = Math.floor( Math.random() * uni.length );
                     pwd[j] = uni[u];
-                    Un.push(j);
+                    Un++;
                     break;
-            }
-        }
-        if(Nu.length == 0)
-        {
-            if(Un.length >= 2)
-            {
-                let id = Un[Un.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Nu.push(id);
-                Nu.sort(function(a, b) { return a - b; });
-                Un.pop();
-            }
-            else if(Up.length >= 2)
-            {
-                let id = Up[Up.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Nu.push(id);
-                Nu.sort(function(a, b) { return a - b; });
-                Up.pop();
-            }
-            else if(Dn.length >= 2)
-            {
-                let id = Dn[Dn.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Nu.push(id);
-                Nu.sort(function(a, b) { return a - b; });
-                Dn.pop();
-            }
-        }
-        if(Dn.length == 0)
-        {
-            if(Un.length >= 2)
-            {
-                let id = Un[Un.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Dn.push(id);
-                Dn.sort(function(a, b) { return a - b; });
-                Un.pop();
-            }
-            else if(Up.length >= 2)
-            {
-                let id = Up[Up.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Dn.push(id);
-                Dn.sort(function(a, b) { return a - b; });
-                Up.pop();
-            }
-            else if(Nu.length >= 2)
-            {
-                let id = Nu[Nu.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Dn.push(id);
-                Dn.sort(function(a, b) { return a - b; });
-                Nu.pop();
-            }
-        }
-        if(Up.length == 0)
-        {
-            if(Un.length >= 2)
-            {
-                let id = Un[Un.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Up.push(id);
-                Up.sort(function(a, b) { return a - b; });
-                Un.pop();
-            }
-            else if(Dn.length >= 2)
-            {
-                let id = Dn[Dn.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Up.push(id);
-                Up.sort(function(a, b) { return a - b; });
-                Dn.pop();
-            }
-            else if(Nu.length >= 2)
-            {
-                let id = Nu[Nu.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Up.push(id);
-                Up.sort(function(a, b) { return a - b; });
-                Nu.pop();
-            }
-        }
-        if(Un.length == 0)
-        {
-            if(Up.length >= 2)
-            {
-                let id = Up[Up.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Un.push(id);
-                Un.sort(function(a, b) { return a - b; });
-                Up.pop();
-            }
-            else if(Dn.length >= 2)
-            {
-                let id = Dn[Dn.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Un.push(id);
-                Un.sort(function(a, b) { return a - b; });
-                Dn.pop();
-            }
-            else if(Nu.length >= 2)
-            {
-                let id = Nu[Nu.length];
-                pwd[id] = Math.floor( Math.random() * 10 );
-                Un.push(id);
-                Un.sort(function(a, b) { return a - b; });
-                Nu.pop();
             }
         }
         for(let j = 0; j < n; j++)
