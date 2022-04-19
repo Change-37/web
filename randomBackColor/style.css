@@ -1,0 +1,26 @@
+#color{
+    width: 10%;
+    height: 50px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    margin: 0;
+    left: 40%;
+    bottom: 25%;
+    text-align: justify;
+}
+
+#btn{
+    width: 10%;
+    height: 50px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    margin: 0;
+    right: 40%;
+    bottom: 25%;
+}
+
+body{
+    margin: 0;
+}
