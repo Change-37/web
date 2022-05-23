@@ -163,3 +163,81 @@
 //     console.log(photos.length);
 // }
 // photoUpload();
+
+// const shoppingList = ["eggs", "milk", "butter"];
+// const shoppingBasket = [...shoppingList, "bread", "water"];
+// console.log(shoppingBasket);
+
+// function foodShopping(shop = "nothing"){
+//     console.log(`I'm going to buy ${shop} form the grocery shop.`);
+// }
+// foodShopping("egg");
+// foodShopping();
+
+// const listIngredients =  [ "flour", "sugar", "eggs", "butter" ];
+// console.log(listIngredients.includes("butter"));
+
+// let example = 'YouTube.com/CodingTutorials360';
+// // console.log(example.padStart(100)); // 앞에 띄워쓰기 100번 함
+// // console.log(example.padEnd(1)); // 뒤에 띄워쓰기 1번 함
+
+// class Player {
+//     constructor(name, country) {
+//         this.name = name;
+//         this.country = country;
+//     }
+//     introduce(name = this.name, country = this.country){
+//         console.log(`${name} was born in ${country}`);
+//     }
+// }
+// class TennisPlayer extends Player {
+//     constructor(name, age) {
+//         super(name)
+//         this.age = age;
+//     }
+//     introduce(name = this.name, age = this.age) {
+//         console.log(`${name} is ${age} years old and how to play Tennis`);
+//     }
+// }
+
+// let messi = new Player('Messi', 'Argentina');
+// messi.introduce();
+// let rafael = new TennisPlayer('Rafael Nadal', 34);
+// rafael.introduce();
+
+// const getUserData = () => {
+//     return new Promise( (resolve, reject) => {
+//         setTimeout( () => {
+//             const error = false;
+//             if (error) {
+//                 reject('Error');
+//             }
+//             else{
+//                 resolve('data');
+//             }
+//         }, 3000);
+//     })
+// }
+// getUserData()
+// .catch( (error) => console.log(error) )
+// .then( (success) => console.log(success) );
+
+// fetch('https://jsonplaceholder.typicode.com/comments/1')
+//   .then((response) => response.json())
+//   .then((json) => console.log(json.body));
+
+fetch('https://jsonplaceholder.typicode.com/comments', {
+  method: 'POST',
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json.body));
+
+// async function getRandJoke() {
+//     return await fetch('https://api.chucknorris.io/jokes/random')
+//       .then(response => response.json())
+//       .then(json => console.log(json.value));
+// }
+// getRandJoke();
